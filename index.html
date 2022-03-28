@@ -1,13 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/main.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="./libs/bootstrap.rtl.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 <body>
-  
+    <div class="container">
+        <div class="row">
+            <h2 class="h3 text-center mt-3 ps-2">Movies catalog <i class="bi bi-camera-reels-fill"></i></h2>
+            <div class="col-4 mb-5">
+                <input class="form-control form-control-lg mb-2" type="text" placeholder="ave" aria-label=".form-control-lg example">
+                <input class="form-control mb-3" type="number" placeholder="5" aria-label="default input example">
+                <select class="form-select mb-3 text-secondary" aria-label="Default select example">
+                    <option selected>All</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <select class="form-select mb-3 text-secondary" aria-label="Default select example">
+                    <option selected>Rating (high to low)</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <button type="button" class="btn btn-primary w-100 mb-4">Search</button>
+                
+                <h1 class="h2 text-center">Bookmarked movies</h1>
+                
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h5 class="h5">
+                            Avengers: Infinity War
+                        </h5>
+                        <button type="button" class="btn btn-danger btn-sm">Remove<i class="bi bi-trash3-fill"></i></button>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="h5">
+                            The Avengers
+                        </h5>
+                        <button type="button" class="btn btn-danger btn-sm">Remove<i class="bi bi-trash3-fill"></i></button>
+                    </li><li class="list-group-item">
+                        <h5 class="h5">
+                            12 Years a Slave
+                        </h5>
+                        <button type="button" class="btn btn-danger btn-sm">Remove<i class="bi bi-trash3-fill"></i></button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="col-8 ps-4">
+                <h3 class="h4 fs-5">Search result: 39</h3>
+                <div class="alert alert-primary " role="alert">
+                   Use the from on the left to search for a movie
+                </div>
+                <div class="card__wrapper d-flex justify-content-between mb-5">
+                    <div class="card" style="width: 350px;">
+                        <img src="./images/card1.jpg" class="card-img-top" alt="image" height="196">
+                        <div class="card-body">
+                            <h2 class="card-title fs-5 ">Avengers: Infinity War</h2>
+                            <span class="d-block mb-2"><i class="bi bi-calendar-check-fill"></i> <span class="text-secondary">2018</span></span>
+                        <i class="bi bi-star text-warning"></i><span class="star">
+                            8.7
+                        </span>       
+                        <div class="buttons d-flex justify-content-between mt-3">
+                            <button type="button" class="btn btn-outline-primary btn-sm">Watch trailer <i class="bi bi-play-btn"></i></button>
+                            <button type="button" class="btn btn-outline-info btn-sm">More info <i class="bi bi-info-circle text-info"></i></button>
+                            <button type="button" class="btn btn-outline-success  btn-sm">Bookmark</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" style="width: 350px;">
+                    <img src="./images/card2.jpg" class="card-img-top " alt="image">
+                    <div class="card-body">
+                        <h2 class="card-title fs-4">The Avengers</h2>
+                        <span class="d-block mb-2"><i class="bi bi-calendar-check-fill"></i> <span class="text-secondary">2012</span></span>
+                        <i class="bi bi-star text-warning"></i><span class="star">
+                            8.1
+                        </span>       
+                        <div class="buttons d-flex justify-content-between mt-3">
+                            <button type="button" class="btn btn-outline-primary btn-sm">Watch trailer <i class="bi bi-play-btn"></i></button>
+                            <button type="button" class="btn btn-outline-info btn-sm">More info <i class="bi bi-info-circle text-info"></i></button>
+                            <button type="button" class="btn btn-outline-success  btn-sm">Bookmark</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="d-flex justify-content-center">
+                <ul class="pagination">
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item " aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </div>
 </body>
 </html>
